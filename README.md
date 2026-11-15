@@ -1,7 +1,5 @@
 # RunConvert SDK for PHP
 
-> **Not published yet.** This SDK launches on Packagist soon, so the install command below won't work until then. Updates: https://www.runconvert.com/sdks
-
 Convert files between 240+ formats (3,000+ conversions) with the [RunConvert API](https://www.runconvert.com/docs):
 documents, images, video, audio, ebooks, archives, fonts and CAD. PHP 8.1+, no dependencies (ext-curl, ext-json).
 Using Laravel? See [runconvert-laravel](https://github.com/runconvert/runconvert-laravel).
