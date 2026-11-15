@@ -12,7 +12,7 @@ namespace RunConvert;
  */
 class RunConvert
 {
-    public const VERSION = '0.1.0';
+    public const VERSION = '0.1.1';
     public const DEFAULT_BASE_URL = 'https://api.runconvert.com/v3';
     private const RETRY_STATUS = [408, 425, 429, 500, 502, 503, 504];
 
@@ -217,7 +217,8 @@ class RunConvert
         $errno = curl_errno($ch);
         $status = (int) curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
         $error = curl_error($ch);
-        curl_close($ch);
+        // The handle is freed when $ch goes out of scope (curl_close() does nothing since PHP 8.0 and is deprecated in 8.5).
+        unset($ch);
         if ($sink) {
             fclose($sink);
         }
