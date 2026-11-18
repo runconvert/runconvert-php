@@ -12,7 +12,7 @@ namespace RunConvert;
  */
 class RunConvert
 {
-    public const VERSION = '0.1.1';
+    public const VERSION = '0.1.1'; // x-release-please-version
     public const DEFAULT_BASE_URL = 'https://api.runconvert.com/v3';
     private const RETRY_STATUS = [408, 425, 429, 500, 502, 503, 504];
 
